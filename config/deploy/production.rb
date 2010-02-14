@@ -24,7 +24,6 @@ namespace(:deploy) do
 
   task :restart do
     migrate
-    sitemap
     cleanup
     run "#{current_release}/script/process/reaper --action=restart --dispatcher=dispatch.fcgi"
   end
