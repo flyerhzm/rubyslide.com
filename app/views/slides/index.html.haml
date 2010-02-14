@@ -1,0 +1,7 @@
+%h3
+  = "Showing #{@count} slides"
+  = "tagged with #{params[:tag_id]}" if params[:tag_id]
+.slides
+  - @slides.each do |slide|
+    = render slide
+.pagination= will_paginate @slides

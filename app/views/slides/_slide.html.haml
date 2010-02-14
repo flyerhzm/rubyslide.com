@@ -1,0 +1,13 @@
+.slide{:id => "slide_#{slide.id}"}
+  %h3= link_to slide.title, slide.url
+  .slide_meta
+    %span.author= slide.username
+    %span @
+    %span.domain= link_to URI.parse(slide.url).host, slide.url
+    %span.time= slide.created_at.to_formatted_s(:long)
+  .description= slide.description
+  .tags
+    %strong Tags:
+    %ul.tag_list
+      - slide.tags.each do |tag|
+        %li.tag= link_to tag.name, tag_slides_url(tag)
