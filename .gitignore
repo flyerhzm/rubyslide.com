@@ -1,4 +1,4 @@
-config/initialize/slideshare.rb
+config/initializers/slideshare.rb
 log/**
 tmp/**/*
 config/database.yml
