@@ -11,4 +11,9 @@ class SlidesController < ApplicationController
       @count = Slide.count
     end
   end
+
+  def feed
+    @slides = Slide.all(:limit => 50, :order => 'created_at DESC')
+    render :layout => false
+  end
 end
