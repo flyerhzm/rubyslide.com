@@ -2,3 +2,4 @@ config/initialize/slideshare.rb
 log/**
 tmp/**/*
 config/database.yml
+mkmf.log

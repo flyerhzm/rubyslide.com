@@ -16,9 +16,9 @@ set :run_method, :run
 namespace(:deploy) do
   task :after_update_code, :roles => :app do
     run "ln -s #{shared_path}/config/database.yml #{current_release}/config/database.yml"
-    run "cp #{shared_path}/.htaccess #{current_release}/public/"
+    run "ln #{shared_path}/.htaccess #{current_release}/public/.htaccess"
     run "cp #{shared_path}/config/environment.rb #{current_release}/config/"
-    run "cp #{shared_path}/config/initializers/slideshare.rb #{current_release}/config/initializers/"
+    run "ln #{shared_path}/config/initializers/slideshare.rb #{current_release}/config/initializers/slideshare.rb"
     run "chmod -R u+rwX,go-w #{current_release}/public #{current_release}/log"
   end
 
