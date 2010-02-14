@@ -3,3 +3,4 @@ log/**
 tmp/**/*
 config/database.yml
 mkmf.log
+db/*.sqlite3
