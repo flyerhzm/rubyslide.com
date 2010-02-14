@@ -13,7 +13,7 @@ end
 def slideshare_tag(tag_name)
   now = Time.now.utc.to_i.to_s
   hashed = Digest::SHA1.hexdigest("#{Slideshare[:shared_secret]}#{now}")
-  options = [[:api_key, Slideshare[:api_key]], [:ts, now], [:hash, hashed], [:tag, tag_name], [:limit, 300], [:detailed, 1]]
+  options = [[:api_key, Slideshare[:api_key]], [:ts, now], [:hash, hashed], [:tag, tag_name], [:limit, 50], [:detailed, 1]]
   query_string = options.collect {|option| option.join('=')}.join('&')
 
   uri = URI.parse("http://www.slideshare.net/api/2/get_slideshows_by_tag?#{query_string}")
@@ -33,7 +33,6 @@ def slideshare_tag(tag_name)
     begin
       slide.save
     rescue ActiveRecord::RecordInvalid
-      break
     end
   end
 end
