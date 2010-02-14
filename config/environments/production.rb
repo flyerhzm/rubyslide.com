@@ -26,3 +26,8 @@ config.action_view.cache_template_loading            = true
 
 # Enable threaded mode
 # config.threadsafe!
+config.after_initialize do
+  ExceptionNotifier.exception_recipients = %w(flyerhzm@gmail.com)
+  ExceptionNotifier.sender_address = %(<webmaster@fetionrobot.com>)
+  ExceptionNotifier.email_prefix = "[fetionrobot.com] "
+end

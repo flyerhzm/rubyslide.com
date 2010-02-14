@@ -1,0 +1,10 @@
+require 'test_helper'  
+
+class ExceptionsTest < ActionController::IntegrationTest  
+  fixtures :all  
+
+  test "<%= @request.request_method.to_s.upcase %> <%= @request.request_uri %>" do  
+    <%= @request.request_method.to_s %> "<%= @request.request_uri %>", <%= @request.parameters.reject {|key, value| ["authenticity_token", "controller", "action"].include? key }.inspect %>  
+    assert_response :success  
+  end  
+end
