@@ -3,7 +3,7 @@ require 'net/http'
 require 'uri'
 require 'rexml/document'
 
-desc 'get slides from slideshare.com'
+desc 'get slides from slideshare.net'
 task :slideshare => :environment do
   slideshare_tag('ruby')
   slideshare_tag('rails')
