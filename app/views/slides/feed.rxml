@@ -8,7 +8,7 @@ xml.rss(:version => '2.0') do
     @slides.each do |slide|
       xml.item do
         xml.title slide.title
-        xml.description slide.description
+        xml.description "#{slide.description}<p><a href='http://www.rubyslide.com' target='_blank'>RubySlide.com Home</a></p>"
         xml.author slide.username
         xml.pubDate slide.created_at.strftime("%a, %d %b %Y %H:%M:%S %z")
         xml.link slide.url
