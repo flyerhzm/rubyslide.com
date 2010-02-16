@@ -2,7 +2,7 @@
   %h1
     = link_to 'RubySlide', '/'
   %h2 Slides for Rubyists
-#search.prepend-3.span-8
+#search.prepend-3.span-14
   - form_tag '/', :method => 'get' do
     = text_field_tag :search_box
-    = submit_tag :submit, :id => :search_submit
+    = submit_tag 'Search', :id => :search_submit

@@ -14,151 +14,84 @@ body
 h2
   display: none
 
+a
+  text-decoration: none
+
 
 #search
-  background: #FFF url(/images/search.png) 120px 0 no-repeat
-  display: block
-  width: 310px
   height: 32px
   margin-top: 39px
 
 
-#search_box
-  border: none
-  color: #444
-  width: 260px
-  padding: 5px 0
-  font-size: 1.1em
-  margin: 4px 0 0 14px
+  #search_box
+    border-color: #666666 #999999 #CCCCCC
+    border-style: solid
+    border-width: 1px
+    font-family: Helvetica, Arial, sans-serif
+    font-size: 16px
+    margin: 0
+    padding: 6px 5px 4px
+    width: 360px
 
 
-#search_submit
-  width: 30px
-  height: 32px
-  opacity: 0
-  cursor: pointer
-  filter: alpha(opacity='0')
+  #search_submit
+    color: #FFFFF
+    cursor: pointer
+    height: 32px
+    margin: 0 0 0 5px
+    width: 70px
+    -moz-border-radius: 10px
+    -webkit-border-radius: 10px
 
 
 .body
   margin-bottom: 30px  
 
 
-a
-  &:link, &:visited
-    color: #A00
-
-
-#sidebar h4, h3
+#sidebar h4
   font-size: 1.4em
   font-weight: bold
-  color: #999
-  margin: 2px 0 10px
+  color: #FF6400
+  margin: 2px 0
 
 
-#submit_panel
-  height: 600px
-  overflow: hidden
-
-
-#submit_table
-  height: 100%
-
-  td
-    margin: 0
-    padding: 0
-
-  tr
-    margin: 0
-    padding: 0
-
-    &.shadow td
-      background: red
-      height: 10px
-      overflow: hidden
-
-    &.top_shadow td
-      background: #444 url('/images/submit_form/shadow_top.png') top center repeat-x  
-
-    &.bottom_shadow td
-      background: #444 url('/images/submit_form/shadow_bottom.png') bottom center repeat-x  
-
-  td.table_body
-    vertical-align: top
-    background: #444
-
-
-.fields
-  background: #6c6c6c
-  -moz-border-radius: 10px
-  -webkit-border-radius: 10px
-  padding: 10px 0 22px
-
-  label
-    font-size: 1.3em
-    color: #CCC
-
-  input.text
-    font-size: 2em
-    margin: 0
-    width: 370px
-    margin-bottom: 8px
-
-
-#submit_panel
-  input.focus, textarea.focus
-    background: #BBDDFF
-
-
-textarea.text
-  height: 107px
-  width: 370px
+.slide-box
+  background-color: #EEEEEE
   margin: 0
-  font-size: 2em
-  font-family: "Helvetica Neue",Arial,Helvetica,sans-serif
+  padding: 6px
 
+  .slide-block
+    background-color: #FFFFFF
+    border: 1px solid #BBBBBB
+    clear: left
+    margin-top: 0
+    padding: 10px
 
-#submit_table h4
-  font-size: 2em
-  color: #CCC
-  margin: 0
-  font-weight: bolder
-
-
-h4#slide_details, h3#slide_details
-  padding-top: 20px
-  clear: both
-
-
-#submit_table .submit_button
-  clear: both
-  padding-top: 20px
-  text-align: right
-
-  input
-    font-size: 1.4em
-    font-weight: bold
-
+    h3
+      color: #FF6400
 
 .slide
   padding-left: 20px
   margin-bottom: 22px
 
-  h4
-    font-size: 2em
-    font-weight: 900
-    margin: 0 0 0.25em -20px
-
-  h3 .comments
-    font-size: 0.8em
-    color: #AAA
+  .header
+    border-bottom: 1px solid #DDDDDD
+    margin: 10px 0 0 0
+    height: 22px
+    h3
+      float: left
+      margin-bottom: 0
+      a
+        color: #0068BD
+    span.time
+      color: #BBBBBB
+      float: right
+      margin-top: 5px
 
   .slide_meta
     margin-bottom: 0.25em
 
   .author
-    background: #A00
-    color: #FFF
     padding: 0.1em 0.3em
 
   .domain
@@ -170,12 +103,18 @@ h4#slide_details, h3#slide_details
     font-size: 1.2em
 
 
-.tag_list
-  display: inline
-  margin-left: 0
-
-  li
+.tags
+  strong
+    font-color: #98968B
+  .tag_list
     display: inline
+    margin-left: 0
+
+    li
+      display: inline
+      a
+        color: #FF6400
+        padding-left: 5px
 
 
 .cloud_5
@@ -199,7 +138,12 @@ h4#slide_details, h3#slide_details
 
 
 .module
-  margin-bottom: 28px
+  border: 1px solid #BBBBBB
+  margin-bottom: 15px
+  padding: 5px
+
+  .feed
+    height: 32px
 
   a[rel=alternate]
     height: 32px
@@ -208,36 +152,30 @@ h4#slide_details, h3#slide_details
     display: block
     float: left
 
+  a
+    color: #0068BD
 
 .pagination
   a
     padding: 3px 8px
     border-width: 1px
     border-style: solid
-    border-color: #A00
+    border-color: #0068DB
 
   span
     padding: 3px 8px
     border-width: 1px
     border-style: solid
-    border-color: #A00
+    border-color: #999
     color: #999
     border-color: #999
 
     &.current
       color: #FFF
-      background: #A00
-      border-color: #A00
-
-  a
-    text-decoration: none
-
+      background: #0068DB
+      border-color: #0068DB
 
 .footer
   border-top: solid 1px #CCC
   padding: 10px 0
   color: #555
-
-
-.credit
-  text-align: right
