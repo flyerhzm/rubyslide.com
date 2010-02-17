@@ -117,11 +117,7 @@ a {
   .module .feed {
     height: 32px; }
   .module a[rel=alternate] {
-    height: 32px;
-    line-height: 32px;
-    margin: 0 10px 10px 0;
-    display: block;
-    float: left; }
+    margin-right: 10px; }
   .module a {
     color: #0068BD; }
 
