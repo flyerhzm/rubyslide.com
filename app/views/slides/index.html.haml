@@ -2,7 +2,7 @@
   .slide-block
     %h3
       = "Showing #{@count} slides"
-      = "tagged with #{params[:tag_id]}" if params[:tag_id]
+      = "tagged with #{tag_name}" if tag_name
     .slides
       - @slides.each do |slide|
         = render slide

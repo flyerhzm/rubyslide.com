@@ -4,8 +4,8 @@
 %html{html_attrs('en')}
   %head
     %meta{'http-equiv' => 'content-type', :content => 'text/html;charset=UTF-8'}
-    %meta{:name => 'description', :content => 'RubySlide gathers all the latest Ruby slides and presentations in one convenient place!'}
-    %title= 'RubySlide - Ruby Slides and Presentations for Ruby People'
+    %meta{:name => 'description', :content => "#{tag_name + " - " if tag_name} RubySlide gathers all the latest Ruby slides and presentations in one convenient place!"}
+    %title= "#{tag_name + " - " if tag_name} RubySlide - Ruby Slides and Presentations for Ruby People"
     %link{:rel => 'shortcut icon', :href => '/favicon.ico'}
     = auto_discovery_link_tag :rss, 'http://feeds.feedburner.com/Rubyslidecom-RecentlyAdded'
     = stylesheet_link_tag 'screen', :media => 'screen, projection'
