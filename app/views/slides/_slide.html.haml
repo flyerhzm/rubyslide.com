@@ -1,11 +1,11 @@
 .slide{:id => "slide_#{slide.id}"}
   .header
-    %h3= link_to slide.title, slide.url
+    %h3= link_to slide.title, slide.url, :target => '_blank'
     %span.time= slide.created_at.to_formatted_s(:long)
   .slide_meta
     %span.author= slide.username
     %span @
-    %span.domain= link_to URI.parse(slide.url).host, slide.url
+    %span.domain= link_to URI.parse(slide.url).host, slide.url, :target => '_blank'
   .description= slide.description
   .tags
     %strong Tags:
