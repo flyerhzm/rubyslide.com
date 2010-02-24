@@ -29,6 +29,6 @@ config.cache_store = :file_store, RAILS_ROOT + '/public/cache'
 # config.threadsafe!
 config.after_initialize do
   ExceptionNotifier.exception_recipients = %w(flyerhzm@gmail.com)
-  ExceptionNotifier.sender_address = %(<webmaster@fetionrobot.com>)
-  ExceptionNotifier.email_prefix = "[fetionrobot.com] "
+  ExceptionNotifier.sender_address = %(<webmaster@rubyslide.com>)
+  ExceptionNotifier.email_prefix = "[rubyslide.com] "
 end
