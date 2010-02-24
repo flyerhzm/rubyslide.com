@@ -10,6 +10,7 @@ class SlidesController < ApplicationController
       @slides = Slide.paginate :page => params[:page], :order => 'slides.created_at DESC'
       @count = Slide.count
     end
+    @tags = Slide.tag_counts_on(:tags).sort_by(&:count).reverse[0..250]
   end
 
   def feed

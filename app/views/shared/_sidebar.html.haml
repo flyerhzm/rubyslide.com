@@ -7,6 +7,6 @@
     %h4 About RubySlide
     RubySlide gathers all the latest Ruby slides and presentations in one convenient place!
   .module
-    %h4 Tags
-    - tag_cloud(Slide.tag_counts_on(:tags), %w(cloud_5 cloud_4 cloud_3 cloud_2 cloud_1)) do |tag, css_class|
+    %h4 Top 250 Tags
+    - tag_cloud(@tags, %w(cloud_5 cloud_4 cloud_3 cloud_2 cloud_1)) do |tag, css_class|
       = link_to tag.name, tag_slides_path(tag), :class => css_class
