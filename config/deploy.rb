@@ -2,7 +2,7 @@ set :application, "rubyslide.com"
 set :repository,  "huangzhi@huangzhimin.com:gits/rubyslide.git"
 set :user, "huangzhi"
 set :scm, :git
-set :deploy_to, "/home7/huangzhi/sites/rubyslide.com"
+set :deploy_to, "/home1/huangzhi/sites/rubyslide.com"
 set :deploy_via, :export
 set(:releases) { capture("ls -x #{releases_path}").split }
 
