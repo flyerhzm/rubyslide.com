@@ -1,3 +1,45 @@
+require 'capistrano/recipes/deploy/scm/base'
+require 'capistrano/recipes/deploy/scm/git'
+::Capistrano::Deploy::SCM::Base.class_eval do
+  alias_method :origin_scm, :scm
+  def scm(*args)
+    if command == "git" and args[0] == "ls-remote"
+      args[0] = "ls-remote --upload-pack=/home1/huangzhi/git/bin/git-upload-pack"
+    end
+    origin_scm(args)
+  end
+end
+::Capistrano::Deploy::SCM::Git.class_eval do
+  def checkout(revision, destination)
+    git    = "/home1/huangzhi/git/bin/git"
+    remote = origin
+
+    args = []
+    args << "-o #{remote}" unless remote == 'origin'
+    if depth = configuration[:git_shallow_clone]
+      args << "--depth #{depth}"
+    end
+
+    execute = []
+    if args.empty?
+      execute << "#{git} clone --upload-pack=/home1/huangzhi/git/bin/git-upload-pack #{verbose} #{configuration[:repository]} #{destination}"
+    else
+      execute << "#{git} clone --upload-pack=/home1/huangzhi/git/bin/git-upload-pack #{verbose} #{args.join(' ')} #{configuration[:repository]} #{destination}"
+    end
+
+    # checkout into a local branch rather than a detached HEAD
+    execute << "cd #{destination} && #{git} checkout #{verbose} -b deploy #{revision}"
+    
+    if configuration[:git_enable_submodules]
+      execute << "#{git} submodule #{verbose} init"
+      execute << "#{git} submodule #{verbose} sync"
+      execute << "#{git} submodule #{verbose} update"
+    end
+
+    execute.join(" && ")
+  end
+end
+
 set :application, "rubyslide.com"
 set :repository,  "huangzhi@huangzhimin.com:gits/rubyslide.git"
 set :user, "huangzhi"
