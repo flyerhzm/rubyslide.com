@@ -47,6 +47,7 @@ set :scm, :git
 set :deploy_to, "/home1/huangzhi/sites/rubyslide.com"
 set :deploy_via, :export
 set(:releases) { capture("ls -x #{releases_path}").split }
+set :rake, "source /home1/huangzhi/.bashrc; rake"
 
 role :app, "rubyslide.com"
 role :web, "rubyslide.com"
