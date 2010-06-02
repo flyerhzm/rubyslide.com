@@ -77,7 +77,8 @@ a {
   .slide .slide_meta {
     margin-bottom: 0.25em; }
   .slide .author {
-    padding: 0.1em 0.3em; }
+    padding: 0.1em 0.3em;
+    color: #FF6400; }
   .slide .domain :link, .slide .domain :visited {
     color: #222; }
   .slide .description {
