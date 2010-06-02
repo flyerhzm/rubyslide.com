@@ -17,7 +17,11 @@ class SlidesController < ApplicationController
   end
 
   def feed
-    @slides = Slide.all(:limit => 50, :order => 'created_at DESC')
+    if params[:username]
+      @slides = Slide.all(:conditions => ["username = ?", params[:username]], :limit => 50, :order => 'created_at DESC')
+    else
+      @slides = Slide.all(:limit => 50, :order => 'created_at DESC')
+    end
     render :layout => false
   end
 end

@@ -117,6 +117,14 @@ a {
   padding: 5px; }
   .module .feed {
     height: 32px; }
+  .module .user_feed {
+    height: 20px; }
+    .module .user_feed a {
+      height: 16px;
+      line-height: 16px;
+      vertical-align: bottom;
+      display: inline-block;
+      color: #FF6400; }
   .module a[rel=alternate] {
     margin-right: 10px; }
   .module a {

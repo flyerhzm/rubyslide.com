@@ -3,6 +3,11 @@
     .feed
       <a href="http://feeds.feedburner.com/Rubyslidecom-RecentlyAdded" title="Subscribe to my feed" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="" style="border:0"/></a>
       <a href="http://feeds.feedburner.com/Rubyslidecom-RecentlyAdded"><img src="http://feeds.feedburner.com/~fc/Rubyslidecom-RecentlyAdded?bg=FF6400&amp;fg=FFFFFF&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a>
+  - if params[:username]
+    .module
+      .user_feed
+        = link_to image_tag("http://www.feedburner.com/fb/images/pub/feed-icon16x16.png"), user_feed_url(params[:username])
+        = link_to "#{params[:username]}'s feed", user_feed_url(params[:username])
   .module
     %h4 About RubySlide
     RubySlide gathers all the latest Ruby slides and presentations in one convenient place!
