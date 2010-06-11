@@ -46,7 +46,6 @@ set :user, "huangzhi"
 set :scm, :git
 set :deploy_to, "/home1/huangzhi/sites/rubyslide.com"
 set :deploy_via, :export
-set(:releases) { capture("ls -x #{releases_path}").split }
 set :rake, "source /home1/huangzhi/.bashrc; rake"
 
 role :app, "rubyslide.com"
@@ -68,7 +67,7 @@ namespace(:deploy) do
   task :restart do
     migrate
     cleanup
-    run "#{current_release}/script/process/reaper --action=restart --dispatcher=dispatch.fcgi"
+    run "source /home1/huangzhi/.bashrc; #{current_release}/script/process/reaper --action=restart --dispatcher=dispatch.fcgi"
   end
 end
 
