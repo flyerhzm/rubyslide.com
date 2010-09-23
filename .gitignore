@@ -4,3 +4,4 @@ tmp/**/*
 config/database.yml
 mkmf.log
 db/*.sqlite3
+.rvmrc
