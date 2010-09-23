@@ -1,5 +1,8 @@
 class SlidesController < ApplicationController
   def index
+    if params[:t]
+      Tracker.create(:from => params[:t])
+    end
     if params[:tag_id]
       @slides = Slide.tagged_with(params[:tag_id]).paginate(:page => params[:page], :order => 'slides.created_at DESC')
       @count = Slide.tagged_with(params[:tag_id]).count
