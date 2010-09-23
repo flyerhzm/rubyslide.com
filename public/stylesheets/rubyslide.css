@@ -5,9 +5,11 @@ body {
   display: block;
   width: 208px;
   height: 66px;
+  color: #332222;
   margin-top: 38px;
   outline: none;
-  text-decoration: none; }
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #aaaaaa; }
 
 h2 {
   display: none; }
@@ -19,7 +21,7 @@ a {
   height: 32px;
   margin-top: 39px; }
   #search #search_box {
-    border-color: #666666 #999999 #CCCCCC;
+    border-color: #666666 #999999 #cccccc;
     border-style: solid;
     border-width: 1px;
     font-family: Helvetica, Arial, sans-serif;
@@ -28,7 +30,6 @@ a {
     padding: 6px 5px 4px;
     width: 360px; }
   #search #search_submit {
-    color: #FFFFF;
     cursor: pointer;
     height: 32px;
     margin: 0 0 0 5px;
@@ -42,77 +43,80 @@ a {
 #sidebar h4 {
   font-size: 1.4em;
   font-weight: bold;
-  color: #FF6400;
+  color: #ff6400;
   margin: 2px 0; }
 
 .slide-box {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   margin: 0;
   padding: 6px; }
   .slide-box .slide-block {
-    background-color: #FFFFFF;
-    border: 1px solid #BBBBBB;
+    background-color: white;
+    border: 1px solid #bbbbbb;
     clear: left;
     margin-top: 0;
     padding: 10px; }
     .slide-box .slide-block h3 {
-      color: #FF6400; }
+      font: 20px verdana; }
 
 .slide {
   padding-left: 20px;
   margin-bottom: 22px; }
   .slide .header {
-    border-bottom: 1px solid #DDDDDD;
+    border-bottom: 1px solid #dddddd;
     margin: 10px 0 0 0;
-    height: 22px; }
+    height: 22px;
+    padding-bottom: 5px; }
     .slide .header h3 {
       float: left;
       margin-bottom: 0; }
       .slide .header h3 a {
-        color: #0068BD; }
+        color: #2276bb; }
     .slide .header span.time {
-      color: #BBBBBB;
+      color: #bbbbbb;
       float: right;
       margin-top: 5px; }
   .slide .slide_meta {
+    clear: both;
     margin-bottom: 0.25em; }
   .slide .author {
     padding: 0.1em 0.3em;
-    color: #FF6400; }
+    color: #ff6400; }
   .slide .domain :link, .slide .domain :visited {
-    color: #222; }
+    color: #222222; }
   .slide .description {
-    color: #333;
-    font-size: 1.2em; }
+    color: #333333;
+    font-size: 1em;
+    margin-bottom: 5px; }
 
-.tags strong {
-  font-color: #98968B; }
-.tags .tag_list {
-  display: inline;
-  margin-left: 0; }
-  .tags .tag_list li {
-    display: inline; }
-    .tags .tag_list li a {
-      color: #FF6400;
-      padding-left: 5px; }
+.tags a {
+  background-color: #eeeeee;
+  border-bottom: 2px solid #3e6d8e;
+  border-right: 2px solid #7f9fb6;
+  display: inline-block;
+  font-size: 12px;
+  color: #2276bb;
+  margin-right: 5px;
+  padding: 2px 5px;
+  vertical-align: middle; }
 
 .cloud_5 {
-  font-size: 1.0em; }
+  font-size: 10px; }
 
 .cloud_4 {
-  font-size: 1.1em; }
+  font-size: 12px; }
 
 .cloud_3 {
-  font-size: 1.2em; }
+  font-size: 16px; }
 
 .cloud_2 {
-  font-size: 1.3em; }
+  font-size: 20px; }
 
 .cloud_1 {
-  font-size: 1.4em; }
+  font-size: 24px; }
 
 .module {
-  border: 1px solid #BBBBBB;
+  border: 1px solid #bbbbbb;
   margin-bottom: 15px;
   padding: 5px; }
   .module .feed {
@@ -120,34 +124,30 @@ a {
   .module .user_feed {
     height: 20px; }
     .module .user_feed a {
-      height: 16px;
-      line-height: 16px;
       vertical-align: bottom;
       display: inline-block;
-      color: #FF6400; }
+      margin: 0 2px;
+      color: #2276bb; }
   .module a[rel=alternate] {
     margin-right: 10px; }
   .module a {
-    color: #0068BD; }
+    color: #0068bd; }
 
-.pagination a {
-  padding: 3px 8px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #0068DB; }
-.pagination span {
-  padding: 3px 8px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #999;
-  color: #999;
-  border-color: #999; }
-  .pagination span.current {
-    color: #FFF;
-    background: #0068DB;
-    border-color: #0068DB; }
+.pagination {
+  display: inline;
+  float: right;
+  margin-top: 20px; }
+  .pagination .disabled {
+    display: none; }
+  .pagination a {
+    border: 1px solid #cccccc;
+    line-height: 30px;
+    margin: 0 2px;
+    padding: 5px 10px;
+    color: #2276bb;
+    text-align: center; }
 
 .footer {
-  border-top: solid 1px #CCC;
+  border-top: solid 1px #cccccc;
   padding: 10px 0;
-  color: #555; }
+  color: #555555; }

@@ -6,8 +6,6 @@
     = link_to slide.username, user_slides_url(slide.username), :class => 'author'
     %span.domain= link_to URI.parse(slide.url).host, slide.url, :target => '_blank'
   .description= slide.description
-  .tags
-    %strong Tags:
-    %ul.tag_list
-      - slide.tags.each do |tag|
-        %li.tag= link_to tag.name, tag_slides_url(tag)
+  %p.tags
+    - slide.tags.each do |tag|
+      = link_to tag.name, tag_slides_url(tag)

@@ -6,9 +6,11 @@ body
   display: block
   width: 208px
   height: 66px
+  color: #332222
   margin-top: 38px
   outline: none
   text-decoration: none
+  text-shadow: 1px 1px 1px #AAAAAA
 
 
 h2
@@ -35,7 +37,6 @@ a
 
 
   #search_submit
-    color: #FFFFF
     cursor: pointer
     height: 32px
     margin: 0 0 0 5px
@@ -68,7 +69,7 @@ a
     padding: 10px
 
     h3
-      color: #FF6400
+      font: 20px verdana
 
 .slide
   padding-left: 20px
@@ -78,17 +79,19 @@ a
     border-bottom: 1px solid #DDDDDD
     margin: 10px 0 0 0
     height: 22px
+    padding-bottom: 5px
     h3
       float: left
       margin-bottom: 0
       a
-        color: #0068BD
+        color: #2276BB
     span.time
       color: #BBBBBB
       float: right
       margin-top: 5px
 
   .slide_meta
+    clear: both
     margin-bottom: 0.25em
 
   .author
@@ -101,41 +104,39 @@ a
 
   .description
     color: #333
-    font-size: 1.2em
-
+    font-size: 1em
+    margin-bottom: 5px
 
 .tags
-  strong
-    font-color: #98968B
-  .tag_list
-    display: inline
-    margin-left: 0
-
-    li
-      display: inline
-      a
-        color: #FF6400
-        padding-left: 5px
-
+  a
+    background-color: #EEEEEE
+    border-bottom: 2px solid #3E6D8E
+    border-right: 2px solid #7F9FB6
+    display: inline-block
+    font-size: 12px
+    color: #2276BB
+    margin-right: 5px
+    padding: 2px 5px
+    vertical-align: middle
 
 .cloud_5
-  font-size: 1.0em
+  font-size: 10px
 
 
 .cloud_4
-  font-size: 1.1em
+  font-size: 12px
 
 
 .cloud_3
-  font-size: 1.2em
+  font-size: 16px
 
 
 .cloud_2
-  font-size: 1.3em
+  font-size: 20px
 
 
 .cloud_1
-  font-size: 1.4em
+  font-size: 24px
 
 
 .module
@@ -148,11 +149,10 @@ a
   .user_feed
     height: 20px
     a
-      height: 16px
-      line-height: 16px
       vertical-align: bottom
       display: inline-block
-      color: #FF6400
+      margin: 0 2px
+      color: #2276BB
 
   a[rel=alternate]
     margin-right: 10px
@@ -161,24 +161,18 @@ a
     color: #0068BD
 
 .pagination
+  display: inline
+  float: right
+  margin-top: 20px
+  .disabled
+    display: none
   a
-    padding: 3px 8px
-    border-width: 1px
-    border-style: solid
-    border-color: #0068DB
-
-  span
-    padding: 3px 8px
-    border-width: 1px
-    border-style: solid
-    border-color: #999
-    color: #999
-    border-color: #999
-
-    &.current
-      color: #FFF
-      background: #0068DB
-      border-color: #0068DB
+    border: 1px solid #CCC
+    line-height: 30px
+    margin: 0 2px
+    padding: 5px 10px
+    color: #2276BB
+    text-align: center
 
 .footer
   border-top: solid 1px #CCC
