@@ -28,8 +28,8 @@ config.cache_store = :dalli_store
 
 # Enable threaded mode
 # config.threadsafe!
-config.after_initialize do
-  ExceptionNotifier.exception_recipients = %w(flyerhzm@gmail.com)
-  ExceptionNotifier.sender_address = %(<webmaster@rubyslide.com>)
-  ExceptionNotifier.email_prefix = "[rubyslide.com] "
-end
+#config.after_initialize do
+  #ExceptionNotifier.exception_recipients = %w(flyerhzm@gmail.com)
+  #ExceptionNotifier.sender_address = %(<webmaster@rubyslide.com>)
+  #ExceptionNotifier.email_prefix = "[rubyslide.com] "
+#end
