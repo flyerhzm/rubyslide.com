@@ -9,6 +9,6 @@
 #
 set :output, "/home/huangzhi/sites/rubyslide.com/production/shared/log/cron_log.log"
 
-every 12.hours, :at => "6:00" do
+every 1.day, :at => "5" do
   rake "slideshare"
 end
