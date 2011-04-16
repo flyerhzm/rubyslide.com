@@ -27,6 +27,7 @@ def slideshare_tag(tag_name)
     slide.description = slideshow.elements["Description"].text
     slide.username = slideshow.elements["Username"].text
     slide.url = slideshow.elements["URL"].text
+    slide.embed = slideshow.elements["Embed"].text
     slide.created_at = slideshow.elements["Created"].text
     slide.updated_at = slide.created_at
     slide.tag_list = slideshow.elements.collect('Tags/Tag') { |tag| tag.text }
