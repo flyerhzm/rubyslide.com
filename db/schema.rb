@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110416030255) do
+ActiveRecord::Schema.define(:version => 20110525142739) do
 
   create_table "slides", :force => true do |t|
     t.string   "title"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20110416030255) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "embed"
+    t.text     "embed"
   end
 
   add_index "slides", ["created_at"], :name => "index_slides_on_created_at"
