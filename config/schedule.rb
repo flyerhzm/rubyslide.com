@@ -8,6 +8,7 @@
 # set :output, "/path/to/my/cron_log.log"
 #
 set :output, "/home/huangzhi/sites/rubyslide.com/production/shared/log/cron_log.log"
+job_type :rake, "cd :path && RAILS_ENV=:environment bundle exec rake :task :output"
 
 every 1.day, :at => "5" do
   rake "slideshare"
