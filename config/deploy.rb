@@ -5,12 +5,13 @@ set :scm, :git
 set :deploy_to, "/home/huangzhi/sites/rubyslide.com/production"
 set :deploy_via, :remote_cache
 set :rails_env, :production
+set :use_sudo, false
 
 require 'bundler/capistrano'
 
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require 'rvm/capistrano'
-set :rvm_ruby_string, 'ruby-1.9.2-p180@rubyslide.com'
+set :rvm_ruby_string, 'ruby-1.9.2-p290@rubyslide.com'
 set :rvm_type, :user
 
 set :whenever_command, "bundle exec whenever"
