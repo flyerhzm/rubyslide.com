@@ -3,7 +3,7 @@
     %h3= link_to slide.title, slide.url, :target => '_blank'
     %span.time= slide.created_at.to_formatted_s(:long)
   .slide_meta
-    = link_to slide.username, user_slides_url(slide.username), :class => 'author'
+    = link_to slide.username, user_slides_url(slide.username.gsub(".", "&#183;")), :class => 'author'
     %span.domain= link_to URI.parse(slide.url).host, slide.url, :target => '_blank'
   .description= slide.description
   %p.tags

@@ -1,9 +1,9 @@
 source :rubygems
 
-gem "rails", "~> 2.3.10"
-gem "mysql"
+gem "rails", "~> 3.0.10"
+gem "mysql2", "~> 0.2.13"
 gem "haml"
 gem "acts-as-taggable-on"
 gem "will_paginate"
-gem "dalli"
 gem "whenever"
+gem 'exception_notification', :require => 'exception_notifier'

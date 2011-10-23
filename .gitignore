@@ -1,7 +1,7 @@
-config/initializers/slideshare.rb
-log/**
-tmp/**/*
-config/database.yml
-mkmf.log
+.bundle
 db/*.sqlite3
+log/*.log
+tmp/
 .rvmrc
+config/database.yml
+config/initializers/slideshare.rb

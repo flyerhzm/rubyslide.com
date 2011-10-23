@@ -6,8 +6,8 @@
   - if params[:username]
     .module
       .user_feed
-        = link_to image_tag("http://www.feedburner.com/fb/images/pub/feed-icon16x16.png"), user_feed_url(params[:username])
-        = link_to "#{params[:username]}'s feed", user_feed_url(params[:username])
+        = link_to image_tag("http://www.feedburner.com/fb/images/pub/feed-icon16x16.png"), user_feed_url(params[:username].gsub(".", "&#183;"))
+        = link_to "#{params[:username].gsub("&#183;", ".")}'s feed", user_feed_url(params[:username].gsub(".", "&#183;"))
   .module
     %h4 About RubySlide
     RubySlide gathers all the latest Ruby slides and presentations in one convenient place!

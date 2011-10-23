@@ -27,6 +27,7 @@ namespace :config do
   task :init do
     run "ln -nfs #{shared_path}/config/database.yml #{current_release}/config/database.yml"
     run "ln -nfs #{shared_path}/config/initializers/slideshare.rb #{current_release}/config/initializers/slideshare.rb"
+    run "ln -nfs #{shared_path}/config/initializers/action_mailer.rb #{current_release}/config/initializers/action_mailer.rb"
   end
 end
 
