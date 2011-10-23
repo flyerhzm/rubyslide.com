@@ -18,6 +18,8 @@ config.action_view.cache_template_loading            = true
 # Use a different cache store in production
 require 'active_support/cache/dalli_store23'
 config.cache_store = :dalli_store
+
+ActionController::Base.asset_host = "assets.rubyslide.com"
 # config.cache_store = :file_store, RAILS_ROOT + '/public/cache'
 
 # Enable serving of images, stylesheets, and javascripts from an asset server
