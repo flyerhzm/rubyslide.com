@@ -4,17 +4,17 @@ class SlidesController < ApplicationController
       Tracker.create(:from => params[:t])
     end
     if params[:tag_id]
-      @slides = Slide.tagged_with(params[:tag_id]).order("created_at DESC").page(params[:page])
+      @slides = Slide.tagged_with(params[:tag_id]).order("created_at DESC").page(params[:page].to_i)
       @count = Slide.tagged_with(params[:tag_id]).count
     elsif params[:username]
       username = params[:username].gsub("&#183;", ".")
-      @slides = Slide.where(:username => username).order("created_at DESC").page(params[:page])
+      @slides = Slide.where(:username => username).order("created_at DESC").page(params[:page].to_i)
       @count = Slide.where(:username => username).count
     elsif params[:search_box]
-      @slides = Slide.where(["title LIKE ?", "%#{params[:search_box]}%"]).order("created_at DESC").page(params[:page])
+      @slides = Slide.where(["title LIKE ?", "%#{params[:search_box]}%"]).order("created_at DESC").page(params[:page].to_i)
       @count = Slide.where(["title LIKE ?", "%#{params[:search_box]}%"]).count
     else
-      @slides = Slide.order("created_at DESC").page(params[:page])
+      @slides = Slide.order("created_at DESC").page(params[:page].to_i)
       @count = Slide.count
     end
     @tags = Slide.tag_counts_on(:tags).sort_by(&:count).reverse[0..250]
