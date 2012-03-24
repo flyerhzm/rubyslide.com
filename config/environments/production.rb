@@ -47,8 +47,8 @@ Rubyslide::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.middleware.use ExceptionNotifier,
-    :email_prefix => "[rubyslide.com] ",
-    :sender_address => %{"notifier" <flyerhzm@gmail.com>},
-    :exception_recipients => %w{flyerhzm@gmail.com}
+  #config.middleware.use ExceptionNotifier,
+  #  :email_prefix => "[rubyslide.com] ",
+  #  :sender_address => %{"notifier" <flyerhzm@gmail.com>},
+  #  :exception_recipients => %w{flyerhzm@gmail.com}
 end
