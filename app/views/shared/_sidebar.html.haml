@@ -1,17 +1,16 @@
-- cache 'sidebar' do
+.module
+  .feed
+    <a href="http://feeds.feedburner.com/Rubyslidecom-RecentlyAdded" title="Subscribe to my feed" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="" style="border:0"/></a>
+    <a href="http://feeds.feedburner.com/Rubyslidecom-RecentlyAdded"><img src="http://feeds.feedburner.com/~fc/Rubyslidecom-RecentlyAdded?bg=FF6400&amp;fg=FFFFFF&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a>
+- if params[:username]
   .module
-    .feed
-      <a href="http://feeds.feedburner.com/Rubyslidecom-RecentlyAdded" title="Subscribe to my feed" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="" style="border:0"/></a>
-      <a href="http://feeds.feedburner.com/Rubyslidecom-RecentlyAdded"><img src="http://feeds.feedburner.com/~fc/Rubyslidecom-RecentlyAdded?bg=FF6400&amp;fg=FFFFFF&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a>
-  - if params[:username]
-    .module
-      .user_feed
-        = link_to image_tag("http://www.feedburner.com/fb/images/pub/feed-icon16x16.png"), user_feed_url(params[:username].gsub(".", "&#183;"))
-        = link_to "#{params[:username].gsub("&#183;", ".")}'s feed", user_feed_url(params[:username].gsub(".", "&#183;"))
-  .module
-    %h4 About RubySlide
-    RubySlide gathers all the latest Ruby slides and presentations in one convenient place!
-  .module
-    %h4 Top 250 Tags
-    - tag_cloud(@tags, %w(cloud_5 cloud_4 cloud_3 cloud_2 cloud_1)) do |tag, css_class|
-      = link_to tag.name, tag_slides_path(tag), :class => css_class
+    .user_feed
+      = link_to image_tag("http://www.feedburner.com/fb/images/pub/feed-icon16x16.png"), user_feed_url(params[:username].gsub(".", "&#183;"))
+      = link_to "#{params[:username].gsub("&#183;", ".")}'s feed", user_feed_url(params[:username].gsub(".", "&#183;"))
+.module
+  %h4 About RubySlide
+  RubySlide gathers all the latest Ruby slides and presentations in one convenient place!
+.module
+  %h4 Top 250 Tags
+  - tag_cloud(@tags, %w(cloud_5 cloud_4 cloud_3 cloud_2 cloud_1)) do |tag, css_class|
+    = link_to tag.name, tag_slides_path(tag), :class => css_class
